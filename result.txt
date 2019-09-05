@@ -1,0 +1,126 @@
+test_coupon_exit (test_user_reg.TestZcCoupon) ... FAIL
+test_coupon_not_exit (test_user_reg.TestZcCoupon) ... FAIL
+test_B (test_fixtures.TestClass1) ... ok
+test_a (test_fixtures.TestClass1) ... ok
+test_A (test_fixtures.TestClass2) ... ok
+test_coupon_exit (test_user_reg.TestZcCoupon) ... FAIL
+test_coupon_not_exit (test_user_reg.TestZcCoupon) ... FAIL
+test_user_login (unittest.loader._FailedTest) ... ERROR
+test_coupon_exit (test_user_reg.TestZcCoupon) ... FAIL
+test_coupon_not_exit (test_user_reg.TestZcCoupon) ... FAIL
+testsuite (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_user_login (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_user_login
+Traceback (most recent call last):
+  File "D:\ph\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\ph\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\python\study_requests\test_user_login.py", line 29, in <module>
+    case.assertIsNone({}) # 失败
+  File "D:\ph\lib\unittest\case.py", line 1250, in assertIsNone
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\ph\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: {} is not None
+
+
+======================================================================
+ERROR: testsuite (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: testsuite
+Traceback (most recent call last):
+  File "D:\ph\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\ph\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\python\study_requests\testsuite.py", line 9, in <module>
+    suite.addTest(testcouponcase())
+TypeError: testcouponcase() missing 1 required positional argument: 'self'
+
+
+======================================================================
+FAIL: test_coupon_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 71, in test_coupon_exit
+    self.assertDictEqual(res.json(), except_res)
+AssertionError: {'sta[13 chars]o': '参数格式有误', 'data': []} != {'sta[13 chars]o': 'success', 'data': {'coupons': [{'id': '40[77 chars]1}]}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': [{'coupon_price': 1,
++                        'coupon_status': '1',
++                        'discount_price': 10,
++                        'id': '4013',
++                        'state': 1}]},
++  'info': 'success',
++  'status': 1}
+
+======================================================================
+FAIL: test_coupon_not_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 43, in test_coupon_not_exit
+    self.assertDictEqual(res.json(), excp_res)
+AssertionError: {'status': 1, 'info': '参数格式有误', 'data': []} != {'status': 1, 'info': '请配置后台优惠券', 'data': {'coupons': []}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': []}, 'info': '请配置后台优惠券', 'status': 1}
+
+======================================================================
+FAIL: test_coupon_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 71, in test_coupon_exit
+    self.assertDictEqual(res.json(), except_res)
+AssertionError: {'sta[13 chars]o': '参数格式有误', 'data': []} != {'sta[13 chars]o': 'success', 'data': {'coupons': [{'id': '40[77 chars]1}]}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': [{'coupon_price': 1,
++                        'coupon_status': '1',
++                        'discount_price': 10,
++                        'id': '4013',
++                        'state': 1}]},
++  'info': 'success',
++  'status': 1}
+
+======================================================================
+FAIL: test_coupon_not_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 43, in test_coupon_not_exit
+    self.assertDictEqual(res.json(), excp_res)
+AssertionError: {'status': 1, 'info': '参数格式有误', 'data': []} != {'status': 1, 'info': '请配置后台优惠券', 'data': {'coupons': []}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': []}, 'info': '请配置后台优惠券', 'status': 1}
+
+======================================================================
+FAIL: test_coupon_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 71, in test_coupon_exit
+    self.assertDictEqual(res.json(), except_res)
+AssertionError: {'sta[13 chars]o': '参数格式有误', 'data': []} != {'sta[13 chars]o': 'success', 'data': {'coupons': [{'id': '40[77 chars]1}]}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': [{'coupon_price': 1,
++                        'coupon_status': '1',
++                        'discount_price': 10,
++                        'id': '4013',
++                        'state': 1}]},
++  'info': 'success',
++  'status': 1}
+
+======================================================================
+FAIL: test_coupon_not_exit (test_user_reg.TestZcCoupon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python\study_requests\test_user_reg.py", line 43, in test_coupon_not_exit
+    self.assertDictEqual(res.json(), excp_res)
+AssertionError: {'status': 1, 'info': '参数格式有误', 'data': []} != {'status': 1, 'info': '请配置后台优惠券', 'data': {'coupons': []}}
+- {'data': [], 'info': '参数格式有误', 'status': 1}
++ {'data': {'coupons': []}, 'info': '请配置后台优惠券', 'status': 1}
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.147s
+
+FAILED (failures=6, errors=2)
